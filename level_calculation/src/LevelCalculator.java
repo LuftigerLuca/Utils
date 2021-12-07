@@ -22,7 +22,7 @@ public class LevelCalculator {
 
 
     /**
-     * This method is useful to calculate the min. xp required for this on the basis of a level
+     * This method is useful to calculate the min. xp required for a level
      *
      * @param level the level for which the required xp value is returned
      * @param multiplier the value by which the xp points are multiplied to calculate the next level
