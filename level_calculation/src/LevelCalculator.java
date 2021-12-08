@@ -16,8 +16,7 @@ public class LevelCalculator {
      * @return the level, which one has the given xp-number
      */
     public static double getLevelFromXp(double xp, double multiplier, double coreValue){
-        double xpCoreValue = xp/coreValue;
-        return Math.floor(Math.log(xpCoreValue) / Math.log(multiplier) + 1);
+        return Math.floor(Math.log(xp/coreValue) / Math.log(multiplier) + 1);
     }
 
 
@@ -30,7 +29,6 @@ public class LevelCalculator {
      * @return the xp required for this based on the specified level
      */
     public static double getXpFromLevel(double level, double multiplier, double coreValue){
-        double newMultiplier = Math.pow(multiplier, level - 1);
-        return coreValue * newMultiplier;
+        return coreValue * Math.pow(multiplier, level - 1);
     }
 }
