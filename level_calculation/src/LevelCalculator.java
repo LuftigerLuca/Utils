@@ -21,13 +21,12 @@ public class LevelCalculator {
      * @return the level, which one has the given xp-number
      */
     public static double getLevelFromXp(double xp, double multiplier, double coreValue){
-        double xpCoreValue = xp/coreValue;
-        return Math.floor(Math.log(xpCoreValue) / Math.log(multiplier) + 1);
+        return Math.floor(Math.log(xp/coreValue) / Math.log(multiplier) + 1);
     }
 
 
     /**
-     * This method is useful to calculate the min. xp required for this on the basis of a level
+     * This method is useful to calculate the min. xp required for a level
      *
      * @param level the level for which the required xp value is returned
      * @param multiplier the value by which the xp points are multiplied to calculate the next level
@@ -35,8 +34,7 @@ public class LevelCalculator {
      * @return the xp required for this based on the specified level
      */
     public static double getXpFromLevel(double level, double multiplier, double coreValue){
-        double newMultiplier = Math.pow(multiplier, level - 1);
-        return coreValue * newMultiplier;
+        return coreValue * Math.pow(multiplier, level - 1);
     }
 
     /**
