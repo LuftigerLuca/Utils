@@ -36,6 +36,7 @@ public class LevelCalculator {
     public static double getXpFromLevel(double level, double multiplier, double coreValue){
         return coreValue * Math.pow(multiplier, level - 1);
     }
+    
 
     /**
      * This method is useful to calculate the progress between 2 levels
