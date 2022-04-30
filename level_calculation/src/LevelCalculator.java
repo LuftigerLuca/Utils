@@ -5,12 +5,7 @@
  */
 
 public class LevelCalculator {
-
-    public static void main(String[] args) {
-        System.out.println(getLevelProgress(125, 1.5, 100));
-        System.out.println(getXpFromLevel(2, 1.5, 100));
-    }
-
+    
     /**
      *
      * This method is suitable for calculating the associated level from a specific xp value.
